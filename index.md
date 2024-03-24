@@ -4,4 +4,4 @@
 ##   作业1  
 
   
-[作业1链接](https://kqzsz/github.io/geo_world.html)
+[作业1链接](https://github.com/kqzsz/github.io/geo_world.html)
