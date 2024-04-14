@@ -1,0 +1,82 @@
+<!DOCTYPE html>  
+<html lang="zh">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>搜猫搜索引擎</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            margin: 0;  
+            padding: 20px;  
+        }  
+          
+        h1 {  
+            text-align: center;  
+        }  
+          
+        .search-container {  
+            max-width: 600px;  
+            margin: 0 auto;  
+            padding: 20px;  
+            text-align: center;
+        }  
+          
+        .search-input {  
+            width: 100%;  
+            padding: 10px;  
+            font-size: 16px;  
+        }  
+          
+        .search-button {  
+            width: 20%;  
+            padding: 10px;  
+            font-size: 16px;  
+            background-color: #2d2d2d;  
+            color: white;  
+            border: none;  
+            cursor: pointer; 
+        }  
+          
+        .search-button:hover {  
+            background-color: #444;  
+        }  
+          
+        .intro {  
+            margin-top: 20px;  
+            text-align: center;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <h1>搜猫搜索引擎</h1>  
+      
+    <div class="search-container">  
+        <input type="text" id="searchInput" class="search-input" placeholder="请输入搜索关键词">  
+        <button onclick="search()" class="search-button">搜索</button>  
+    </div>  
+      
+    <div class="intro">  
+        <p>使用我们的搜索引擎，你可以快速找到你需要的信息。输入关键词并点击搜索按钮，我们将会带你搜狗搜索结果页面。</p>  
+    </div>  
+  
+    <script>  
+        function search() {  
+            // 获取输入框的值  
+            var searchTerm = document.getElementById("searchInput").value;  
+              
+            // 检查搜索词是否为空  
+            if (searchTerm === "") {  
+                alert("请输入搜索关键词！");  
+                return;  
+            }  
+              
+            // 构造搜狗搜索的URL  
+            var searchUrl = "https://www.sogou.com/s?wd=" + encodeURIComponent(searchTerm);  
+              
+            // 重定向到搜狗搜索结果页面  
+            window.location.href = searchUrl;  
+        }  
+    </script>  
+</body>  
+</html>
